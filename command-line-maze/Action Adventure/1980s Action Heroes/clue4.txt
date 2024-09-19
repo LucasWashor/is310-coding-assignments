@@ -1,0 +1,5 @@
+In the 1980s, action heroes took the spotlight. Answer the following to proceed: Which 1980s action hero starred in 'Predator'?
+
+Arnold Schwarzenegger
+Sylvester Stallone
+If you believe the answer is 1, proceed to 'Mystery Movies'. If you believe the answer is 2, proceed to 'Classic Movies\Golden Age'.

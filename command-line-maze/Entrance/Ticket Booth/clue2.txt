@@ -1,0 +1,6 @@
+To proceed, guess the highest-grossing silent film:
+1) 'The Birth of a Nation' (1915)
+2) 'The Big Parade' (1925).
+
+If you believe the answer is 1, head to the 'Classic Movies' room.
+If you believe the answer is 2, head to the 'Action Adventure' room.
