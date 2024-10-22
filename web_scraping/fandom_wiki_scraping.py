@@ -43,3 +43,6 @@ with open('mcu_movies.csv', 'w', newline='') as csvfile:
     writer.writeheader()
     for movie in movies_data:
         writer.writerow(movie)
+
+
+print("Data scraping complete. Check 'mcu_movies.csv' for results.")

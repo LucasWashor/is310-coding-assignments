@@ -1,14 +1,18 @@
 # Marvel Cinematic Universe Web Scraping Project
 
-## Overview
-This project aims to scrape data from the Marvel Cinematic Universe fandom wiki to collect information about movies and TV shows.
+For this assignment, we were required to scrape any fandom of our choosing! For my project, I chose to scrape the Marvel Cinematic Universe fandom page, located at [Marvel Cinematic Universe Fandom](https://marvelcinematicuniverse.fandom.com/wiki/Marvel_Cinematic_Universe). 
 
-## Terms of Service and Scraping Policy
-Before scraping data from the Marvel Cinematic Universe fandom wiki, I reviewed the site's terms of service and the `robots.txt` file.
+The specific wiki pages I decided to scrape are the individual movie and TV show pages, as they contain detailed information about each title within the Marvel Cinematic Universe.
 
-- **robots.txt File**: The `robots.txt` file can be accessed [here](https://marvelcinematicuniverse.fandom.com/robots.txt). It allows web crawlers to access most of the site while disallowing specific special pages.
-- **Terms of Service**: The terms of service can be found [here](https://www.fandom.com/terms). I ensured that my scraping activities comply with their guidelines.
+The robots.txt file for the Marvel Cinematic Universe fandom can be found here: [robots.txt](https://marvelcinematicuniverse.fandom.com/robots.txt). The specific webpages we are scraping are within the allowed paths, ensuring compliance with the site's scraping policies.
 
+With this project, I specifically wanted to gather information about the movies and TV shows in the Marvel Cinematic Universe, including their titles, release dates, box office earnings, genres, directors, and brief plot summaries. This data is interesting for researchers as it provides insights into the cinematic trends, financial success, and storytelling evolution within the franchise.
+
+## What You'll Need to Run the `fandom_wiki_scraping.py` File
+
+- Python with the following libraries installed: `requests`, `BeautifulSoup`, and `csv`.
+- Access to the internet to scrape the webpage.
+- A passion for all things Marvel!
 
 ## Data Collected
 - Movie Title
