@@ -8,12 +8,14 @@ I have always loved playing minecraft with my brothers as a kid and I thought it
 
 ## Data to be Scraped
 
-The data extracted includes:
-- Enchantment Name
-- Effect
-- Applicable Items
-- Max Level
-- Enchantment Type
+- **Name**: The name of the enchantment.
+- **Summary**: A brief description of the enchantment.
+- **Treasure**: Indicates whether the enchantment is classified as a treasure enchantment.
+- **Incompatible With**: Other enchantments that cannot be combined with this one.
+- **Max Level**: The highest level to which the enchantment can be applied.
+- **Primary Items**: Items primarily used for applying the enchantment.
+- **Secondary Items**: Items that can also be used for applying the enchantment.
+- **Weight**: The relative weight of the enchantment for spawning.
 
 ## Robots.txt File
 
