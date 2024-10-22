@@ -1,48 +1,80 @@
-import requests
 from bs4 import BeautifulSoup
-import csv
+import requests
+import pandas as pd
 
-# URL of the Marvel Cinematic Universe Wiki movies page
-url = 'https://marvelcinematicuniverse.fandom.com/wiki/Marvel_Cinematic_Universe'
+# Fetch the webpage
+response = requests.get("https://minecraft.fandom.com/wiki/Enchanting")
+soup = BeautifulSoup(response.text, "html.parser")
 
-# Send a GET request to the webpage
-response = requests.get(url)
-soup = BeautifulSoup(response.text, 'html.parser')
+# Find all tables
+tables = soup.find_all('table')
 
-# Create a list to hold the movie data
-movies_data = []
+# Initialize a variable to hold the enchantment table
+enchantment_table = None
 
-# Find all movie entries
-movies = soup.find_all('div', class_='movie')  # Adjust this based on the actual HTML structure
+# Look for the table that contains the summary of enchantments
+for table in tables:
+    if 'Summary of enchantments' in table.get('data-description', ''):
+        enchantment_table = table
+        break
 
-for movie in movies:
-    title = movie.find('h2', class_='title').get_text(strip=True)
-    release_date = movie.find('p', class_='release-date').get_text(strip=True)
-    box_office = movie.find('p', class_='box-office').get_text(strip=True)
-    genre = movie.find('p', class_='genre').get_text(strip=True)
-    director = movie.find('p', class_='director').get_text(strip=True)
-    cast = movie.find('p', class_='cast').get_text(strip=True)
-    summary = movie.find('p', class_='summary').get_text(strip=True)
+# Lists to store enchantment data
+names = []
+summaries = []
+treasures = []
+incompatible_with = []
+max_levels = []
+primary_items = []
+secondary_items = []
+weights = []
 
-    # Append data to the list
-    movies_data.append({
-        'Title': title,
-        'Release Date': release_date,
-        'Box Office': box_office,
-        'Genre': genre,
-        'Director': director,
-        'Cast': cast,
-        'Summary': summary
-    })
+# Check if the enchantment table is found
+if enchantment_table:
+    # Iterate through each row in the table
+    for row in enchantment_table.find_all('tr')[1:]:  # Skip the header row
+        columns = row.find_all('td')
+        if len(columns) >= 8:  # Ensure there are enough columns
+            # Extract enchantment data
+            name = columns[0].text.strip()  # First column for Name
+            summary = columns[1].text.strip()
+            treasure = columns[2].text.strip()
+            incompatible_item = columns[3].text.strip()
+            max_level = columns[4].text.strip()
+            primary_item = columns[5].text.strip()
+            secondary_item = columns[6].text.strip()
+            weight = columns[7].text.strip()
 
-# Save data to CSV
-with open('mcu_movies.csv', 'w', newline='') as csvfile:
-    fieldnames = ['Title', 'Release Date', 'Box Office', 'Genre', 'Director', 'Cast', 'Summary']
-    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            # Append the data to lists
+            names.append(name)
+            summaries.append(summary)
+            treasures.append(treasure)
+            incompatible_with.append(incompatible_item)
+            max_levels.append(max_level)
+            primary_items.append(primary_item)
+            secondary_items.append(secondary_item)
+            weights.append(weight)
 
-    writer.writeheader()
-    for movie in movies_data:
-        writer.writerow(movie)
+    # Check if any data was collected
+    if names:
+        # Create a DataFrame to organize the data
+        df = pd.DataFrame({
+            'Name': names,
+            'Summary': summaries,
+            'Treasure': treasures,
+            'Incompatible With': incompatible_with,
+            'Max Level': max_levels,
+            'Primary Items': primary_items,
+            'Secondary Items': secondary_items,
+            'Weight': weights
+        })
 
+        # Remove duplicates if any
+        df.drop_duplicates(inplace=True)
 
-print("Data scraping complete. Check 'mcu_movies.csv' for results.")
+        # Save to CSV file
+        df.to_csv("minecraft_enchantments.csv", index=False)
+        print("Data scraping complete. Check 'minecraft_enchantments.csv' for results.")
+    else:
+        print("No enchantment data found. Please check the table structure on the wiki page.")
+else:
+    print("Enchantment table not found. Please verify the HTML structure.")

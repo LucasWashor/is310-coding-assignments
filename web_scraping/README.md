@@ -1,24 +1,33 @@
-# Marvel Cinematic Universe Web Scraping Project
+# Minecraft Enchantment Scraper
 
-For this assignment, we were required to scrape any fandom of our choosing! For my project, I chose to scrape the Marvel Cinematic Universe fandom page, located at [Marvel Cinematic Universe Fandom](https://marvelcinematicuniverse.fandom.com/wiki/Marvel_Cinematic_Universe). 
+For this assignment, I chose to scrape the Minecraft fandom page to gather information about various enchantments in the game. The specific page I am scraping is [Minecraft Enchanting](https://minecraft.fandom.com/wiki/Enchanting).
 
-The specific wiki pages I decided to scrape are the individual movie and TV show pages, as they contain detailed information about each title within the Marvel Cinematic Universe.
+## Why Minecraft Enchantments?
 
-The robots.txt file for the Marvel Cinematic Universe fandom can be found here: [robots.txt](https://marvelcinematicuniverse.fandom.com/robots.txt). The specific webpages we are scraping are within the allowed paths, ensuring compliance with the site's scraping policies.
+I have always loved playing minecraft with my brothers as a kid and I thought it would be an awesome page to scrape! To kind of explain what enchantments are if you aren't familiar: Enchantments play a crucial role in enhancing the gameplay experience by providing players with various advantages, such as improved weapon damage, better armor protection, and special abilities. By collecting data on enchantments, researchers and players can gain insights into how different enchantments can be strategically used in gameplay.
 
-With this project, I specifically wanted to gather information about the movies and TV shows in the Marvel Cinematic Universe, including their titles, release dates, box office earnings, genres, directors, and brief plot summaries. This data is interesting for researchers as it provides insights into the cinematic trends, financial success, and storytelling evolution within the franchise.
+## Data to be Scraped
 
-## What You'll Need to Run the `fandom_wiki_scraping.py` File
+The data extracted includes:
+- Enchantment Name
+- Effect
+- Applicable Items
+- Max Level
+- Enchantment Type
 
-- Python with the following libraries installed: `requests`, `BeautifulSoup`, and `csv`.
-- Access to the internet to scrape the webpage.
-- A passion for all things Marvel!
+## Robots.txt File
 
-## Data Collected
-- Movie Title
-- Release Date
-- Box Office Earnings
-- Genre
-- Director
-- Cast
-- Plot Summary
+I checked the robots.txt file for the Minecraft fandom to ensure compliance with their scraping policies. You can view the file [here](https://minecraft.fandom.com/robots.txt). The relevant pages for this project are allowed for scraping.
+
+## Requirements
+
+To run the `fandom_wiki_scraping.py` file, you will need:
+- Python installed on your system.
+- The following libraries: `requests`, `beautifulsoup4`, and `csv`.
+
+## Usage
+
+1. Clone the repository or download the files.
+2. Run the script using:
+   ```bash
+   python fandom_wiki_scraping.py

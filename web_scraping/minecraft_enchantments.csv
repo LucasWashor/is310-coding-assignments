@@ -1,0 +1,42 @@
+Name,Summary,Treasure,Incompatible With,Max Level,Primary Items,Secondary Items,Weight
+Aqua Affinity,Increases underwater mining speed.,No,,I(1),,,2
+Bane of Arthropods,"Increases damage and applies Slowness IV to arthropod mobs (spiders, cave spiders, silverfish, endermites and bees).",No,"Smite, Sharpness",V(5),‌[BE  only],‌[JE  only],5
+Blast Protection,Reduces explosion damage and knockback.,No,"Fire Protection, Protection, Projectile Protection",IV(4),,,2
+Channeling,"During thunderstorms, trident summons a lightning bolt on the target when hitting it.",No,Riptide,I(1),,,1
+Cleaving ‌[upcoming: JE Combat Tests],Increases damage and shield stunning.,Unknown,"Sharpness, Bane of Arthropods, Smite",III(3),,,
+Curse of Binding,Items cannot be removed from armor slots.,Yes,,I(1),,,1
+Curse of Vanishing,Item disappears on death.,Yes,,I(1),,‌[BE  only],1
+Depth Strider,Increases underwater movement speed.,No,Frost Walker,III(3),,,2
+Efficiency,"Increases tool speed, as well as the chance for axes to disable shields.",No,,V(5),,,10
+Feather Falling,Reduces fall damage.,No,,IV(4),,,5
+Fire Aspect,Sets target on fire.,No,,II(2),‌[upcoming: JE Combat Tests],,2
+Fire Protection,Reduces fire damage and burn time.Mutually exclusive with other protections.,No,"Blast Protection, Protection, Projectile Protection",IV(4),,,5
+Flame,Arrows shot are ignited and deal fire damage to the target.,No,,I(1),,,2
+Fortune,Increases the amount of block drops.,No,Silk Touch,III(3),,,2
+Frost Walker,Allows the player to walk on water by freezing the water under their feet.,Yes,Depth Strider,II(2),,,2
+Impaling,"Increases damage against aquatic mobs. In Bedrock Edition, increases damage against mobs in water or rain.",No,,V(5),,,2
+Infinity,Prevents consumption of normal arrows (tipped arrows and spectral arrows are consumed).,No,Mending,I(1),,,1
+Knockback,Increases knockback.,No,,II(2),,,5
+Looting,Increases mob loot.,No,,III(3),,,2
+Loyalty,Trident returns after being thrown.,No,Riptide,III(3),,,5
+Luck of the Sea,"Increases rate of good loot (enchanting books, etc.).",No,,III(3),,,2
+Lure,Decreases time for bites.,No,,III(3),,,2
+Mending,Repairs the item using experience.,Yes,Infinity,I(1),,,2
+Multishot,Fires 3 arrows at the same time.,No,Piercing,I(1),,,2
+Piercing,"Arrows pierce entities, allowing for arrows to pierce through stacks of mobs.",No,Multishot,IV(4),,,10
+Power,Increases arrow damage.,No,,V(5),,,10
+Projectile Protection,Reduces damage from projectiles.,No,"Protection, Blast Protection, Fire Protection",IV(4),,,5
+Protection,Reduces generic damage.,No,"Blast Protection, Fire Protection, Projectile Protection",IV(4),,,10
+Punch,Increases arrow knockback.,No,,II(2),,,2
+Quick Charge,Decreases crossbow charging time.,No,,III(3),,,5
+Respiration,Extends underwater breathing time.,No,,III(3),,,2
+Riptide,Trident launches player with itself when thrown while in water or rain.,No,"Channeling, Loyalty",III(3),,,2
+Sharpness,Increases melee damage.,No,"Bane of Arthropods, Smite",V(5),‌[BE  only],‌[JE  only],10
+Silk Touch,Mined blocks drop themselves.,No,Fortune,I(1),,‌[BE  only],1
+Smite,Increases damage to the undead.,No,"Bane of Arthropods, Sharpness",V(5),‌[BE  only],‌[JE  only],5
+Soul Speed,Increases movement speed on soul sand and soul soil.,Yes,,III(3),,,1
+Sweeping Edge‌[Java Edition  only],Increases sweeping attack damage.,No,,III(3),,,2
+Swift Sneak,Increases sneaking speed.,Yes,,III(3),,,1
+Thorns,Taking damage causes the attacker to also take damage.,No,,III(3),,,1
+Unbreaking,Reduces durability damage.,No,,III(3),,,1
+Wind Burst,Any smash attacks causes the player a wind charge.,Yes,,III(3),,,1
